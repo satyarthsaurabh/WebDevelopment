@@ -1,0 +1,27 @@
+<!-- include header template -->
+<%- include("partials/header.ejs") -%>
+		
+<h1>This page belong to post</h1>
+
+<% for(var i=0; i < post.length; i++){ %>
+	<li>
+		Title : <%= post[i].title %>  Author :  <%= post[i].author %> 
+	</li>
+<% } %>
+
+
+<div>
+	<% post.forEach(function(el){ %>
+<li> 
+	Title : <%= el.title %>  Author :  <%= el.author %> 
+</li>
+<% }) %>
+</div>
+		
+<!-- include footer template -->
+<%- include("partials/footer.ejs") -%>
+
+
+
+
+
